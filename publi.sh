@@ -13,4 +13,5 @@ rsync -adO --omit-dir-times --progress ${SOURCE} ${DESTINATION} \
     --exclude .idea \
     --exclude clovisdp.iml \
     --exclude publi.sh \
+    --exclude README.md \
     --temp-dir=${TEMP}
