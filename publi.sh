@@ -9,11 +9,12 @@ rm -rf ${TEMP}
 mkdir ${TEMP}
 
 echo "Sending the file..."
-rsync -adO --omit-dir-times --progress ${SOURCE} ${DESTINATION} \
+rsync -adO --delete --omit-dir-times --progress ${SOURCE} ${DESTINATION} \
     --exclude .idea \
     --exclude clovisdp.iml \
     --exclude publi.sh \
     --exclude README.md \
     --exclude .git \
     --exclude .gitignore \
+    --exclude ./data/clovis/functions/shop/template/ \
     --temp-dir=${TEMP}
