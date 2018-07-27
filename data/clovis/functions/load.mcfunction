@@ -1,5 +1,14 @@
 me is reloading the datapacks...
 
+# Setting up the scoreboard for the shop
+scoreboard objectives add shopvars dummy "shopvars"
+scoreboard players set stock shopvars 128
+scoreboard players set rarity shopvars 1
+scoreboard players set usability shopvars 60
+scoreboard players set minprice shopvars 1
+scoreboard players set quantity shopvars 120
+scoreboard players set correction shopvars 100000
+
 # Setting up the RNG, see clovis:mobs
 scoreboard objectives add RNG dummy "RNG"
 scoreboard players set counter RNG 0
