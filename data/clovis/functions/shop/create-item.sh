@@ -27,13 +27,14 @@ function changefile {
     local TO=$2
     echo "${FROM} -> ${TO}"
 
-    sed -e "s/ITEM_ID/${ITEM_ID}/" ${FROM} | \
-    sed -e "s/QUANTITY_BUY/${QUANTITY_BUY}/" | \
-    sed -e "s/QUANTITY_SELL/${QUANTITY_SELL}/" | \
-    sed -e "s/STOCK/${STOCK}/" | \
-    sed -e "s/USABILITY/${USABILITY}/" | \
-    sed -e "s/RARITY/${RARITY}/" | \
-    sed -e "s/MINPRICE/${MINPRICE}/" > ${TO}
+    cat ${FROM} | \
+    sed -e "s/ITEM_ID/${ITEM_ID}/g" | \
+    sed -e "s/QUANTITY_BUY/${QUANTITY_BUY}/g" | \
+    sed -e "s/QUANTITY_SELL/${QUANTITY_SELL}/g" | \
+    sed -e "s/STOCK/${STOCK}/g" | \
+    sed -e "s/USABILITY/${USABILITY}/g" | \
+    sed -e "s/RARITY/${RARITY}/g" | \
+    sed -e "s/MINPRICE/${MINPRICE}/g" > ${TO}
 }
 
 for FILE in ${TEMPLATES}/*; do
