@@ -25,4 +25,5 @@ execute at @e[tag=changing] run summon wither_skeleton ~ ~ ~ {CustomNameVisible:
 tp @e[tag=changing] ~ ~-200 ~
 
 # Give the tag to anyone still alive
+execute as @e[tag=!verified,type=creeper] run data merge entity @s {Fire:-1s}
 tag @e add verified
