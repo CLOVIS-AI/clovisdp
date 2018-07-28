@@ -4,7 +4,7 @@
 execute as @e[type=minecraft:creeper,nbt=!{Fire:-1s}] run data merge entity @s {ignited:1b}
 
 # Flame arrows burn the ground:
-tag @e[type=minecraft:arrow,nbt=!{Fire:-1s,inGround:0b}] add burning
+tag @e[type=minecraft:arrow,nbt=!{Fire:-1s},nbt={inGround:1b}] add burning
 
 # Remove tag 'burning' when close to important areas
 tag @e[tag=burning,x=-88,y=66,z=304,distance=..200] remove burning
