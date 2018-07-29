@@ -16,5 +16,5 @@ rsync -adO --delete --omit-dir-times --progress ${SOURCE} ${DESTINATION} \
     --exclude README.md \
     --exclude .git \
     --exclude .gitignore \
-    --exclude ./data/clovis/functions/shop/template/ \
+    --exclude ./data/clovis/functions/shop/template \
     --temp-dir=${TEMP}
